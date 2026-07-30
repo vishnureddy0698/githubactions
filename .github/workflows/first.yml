@@ -5,7 +5,6 @@ on:
   workflow_dispatch:
 jobs:
   workflowtesting:
-    run-on: ubuntu-latest
     steps:
       - name: This step used for Testing
         run: echo "This is vishnu"
