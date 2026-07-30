@@ -5,8 +5,10 @@ on:
   workflow_dispatch:
 jobs:
   workflowtesting:
+    env:
+      testing: rajesh
     runs-on: centop-rfsh
     steps:
       - uses: actions/checkout@v4
       - name: This step used for Testing
-        run: echo "This is vishnu"
+        run: echo "This is" ${{ env.testing }}
