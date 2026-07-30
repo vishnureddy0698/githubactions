@@ -12,3 +12,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: This step used for Testing
         run: echo "This is" ${{ env.testing }}
+        background: true
