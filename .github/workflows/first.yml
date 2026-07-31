@@ -9,7 +9,13 @@ jobs:
       testing: rajesh
     runs-on: centop-rfsh
     steps:
-      - uses: actions/checkout@v4
+      - name : Chckeout to github repo
+        uses: actions/checkout@v4
       - name: This step used for Testing
         run: echo "This is" ${{ env.testing }}
         background: true
+      - name: Login to docker hub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ var.DOCKER_USERNAME }}
+          password: ${{ secrets.PASSWORD_TOKEN}}
