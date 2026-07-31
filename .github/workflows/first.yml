@@ -15,8 +15,8 @@ jobs:
         uses: docker/login-action@v4
         with:
           username: ${{ vars.DOCKER_USERNAME }}
-          password: ${{ secrets.PASSWORD_TOKEN}}
+          password: ${{ secrets.PASSWORD_TOKEN }}
       - name: Building docker images
         run: sudo docker build -t docker-test:v1 .
       - name: Pushing docker images
-        run: sudo docker push ${{ secrets.PASSWORD_TOKEN }}/docker-test:v1
+        run: sudo docker push vishnureddy/docker-test:v1
