@@ -19,6 +19,6 @@ jobs:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.PASSWORD_TOKEN}}
       - name: Building docker images
-        run: docker build -t docker-test:v1 .
+        run: sudo docker build -t docker-test:v1 .
       - name: Pushing docker images
-        run: docker push ${{ secrets.PASSWORD_TOKEN }}/docker-test:v1
+        run: sudo docker push ${{ secrets.PASSWORD_TOKEN }}/docker-test:v1
